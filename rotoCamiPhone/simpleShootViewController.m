@@ -7,12 +7,23 @@
 //
 
 #import "simpleShootViewController.h"
+#import "blueCommsiPhone.h"
 
 @interface simpleShootViewController ()
 
 @end
 
 @implementation simpleShootViewController
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return [timeArray count];
+}
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return [timeArray objectAtIndex:row];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +37,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    timeArray = [[NSMutableArray alloc] init];
+    [timeArray addObject:@"Seconds"];
+    [timeArray addObject:@"Minutes"];
+    [timeArray addObject:@"Hours"];
+    [BulbModePicker selectRow:2 inComponent:0 animated:0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,6 +52,29 @@
 }
 
 - (IBAction)TimeDelaySliderChange:(id)sender forEvent:(UIEvent *)event {
-    _TimeDelayValue.text = (@"%.2f", _TimeDelaySlider.value);
+    _TimeDelayValue.text = [NSString stringWithFormat:@"%.0f Seconds", _TimeDelaySlider.value];
+}
+
+- (IBAction)BulbModeSliderChange:(id)sender {
+    bulbModeSliderValue = _BulbModeSlider.value;
+    [timeArray replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"%.0f Seconds", bulbModeSliderValue]];
+     [timeArray replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"%.0f Minutes", bulbModeSliderValue]];
+     [timeArray replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"%.0f Hours", bulbModeSliderValue]];
+    [BulbModePicker reloadAllComponents];
+}
+- (IBAction)BulbModeSwitchChange:(id)sender {
+    bulbModeBool = _BulbModeSwitch.on;
+    [_BulbModeSlider setEnabled:bulbModeBool];
+    if (bulbModeBool){
+        [_BulbModePicker setUserInteractionEnabled:YES];
+        [_BulbModePicker setAlpha:1];
+    } else {
+        [_BulbModePicker setUserInteractionEnabled:NO];
+        [_BulbModePicker setAlpha:.6];
+    }
+}
+
+- (IBAction)captureButtonAction:(id)sender {
+    blueCommsiPhone.
 }
 @end

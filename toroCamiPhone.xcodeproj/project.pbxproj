@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38AC8E9817ECC89100B7A21D /* simpleShootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC8E9717ECC89100B7A21D /* simpleShootViewController.m */; };
+		38AC8E9B17ECE9DE00B7A21D /* blueCommsiPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC8E9A17ECE9DE00B7A21D /* blueCommsiPhone.m */; };
 		38AD509B17E3890300592986 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AD509A17E3890300592986 /* Foundation.framework */; };
 		38AD509D17E3890300592986 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AD509C17E3890300592986 /* CoreGraphics.framework */; };
 		38AD509F17E3890300592986 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AD509E17E3890300592986 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* Begin PBXFileReference section */
 		38AC8E9617ECC89100B7A21D /* simpleShootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = simpleShootViewController.h; sourceTree = "<group>"; };
 		38AC8E9717ECC89100B7A21D /* simpleShootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = simpleShootViewController.m; sourceTree = "<group>"; };
+		38AC8E9917ECE9DE00B7A21D /* blueCommsiPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blueCommsiPhone.h; sourceTree = "<group>"; };
+		38AC8E9A17ECE9DE00B7A21D /* blueCommsiPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blueCommsiPhone.m; sourceTree = "<group>"; };
 		38AD509717E3890300592986 /* toroCamiPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toroCamiPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AD509A17E3890300592986 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		38AD509C17E3890300592986 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -132,6 +135,8 @@
 				38AD50B017E3890300592986 /* ViewController.m */,
 				38AD50B217E3890300592986 /* Images.xcassets */,
 				38AD50A117E3890300592986 /* Supporting Files */,
+				38AC8E9917ECE9DE00B7A21D /* blueCommsiPhone.h */,
+				38AC8E9A17ECE9DE00B7A21D /* blueCommsiPhone.m */,
 			);
 			name = toroCamiPhone;
 			path = rotoCamiPhone;
@@ -266,6 +271,7 @@
 			files = (
 				38AC8E9817ECC89100B7A21D /* simpleShootViewController.m in Sources */,
 				38AD50B117E3890300592986 /* ViewController.m in Sources */,
+				38AC8E9B17ECE9DE00B7A21D /* blueCommsiPhone.m in Sources */,
 				38AD50AB17E3890300592986 /* AppDelegate.m in Sources */,
 				38AD50A717E3890300592986 /* main.m in Sources */,
 			);
