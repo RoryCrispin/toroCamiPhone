@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38AC8E9817ECC89100B7A21D /* simpleShootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC8E9717ECC89100B7A21D /* simpleShootViewController.m */; };
 		38AD509B17E3890300592986 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AD509A17E3890300592986 /* Foundation.framework */; };
 		38AD509D17E3890300592986 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AD509C17E3890300592986 /* CoreGraphics.framework */; };
 		38AD509F17E3890300592986 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AD509E17E3890300592986 /* UIKit.framework */; };
@@ -34,23 +35,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		38AD509717E3890300592986 /* rotoCamiPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rotoCamiPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38AC8E9617ECC89100B7A21D /* simpleShootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = simpleShootViewController.h; sourceTree = "<group>"; };
+		38AC8E9717ECC89100B7A21D /* simpleShootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = simpleShootViewController.m; sourceTree = "<group>"; };
+		38AD509717E3890300592986 /* toroCamiPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toroCamiPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AD509A17E3890300592986 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		38AD509C17E3890300592986 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		38AD509E17E3890300592986 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		38AD50A217E3890300592986 /* rotoCamiPhone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "rotoCamiPhone-Info.plist"; sourceTree = "<group>"; };
+		38AD50A217E3890300592986 /* toroCamiPhone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "toroCamiPhone-Info.plist"; sourceTree = "<group>"; };
 		38AD50A417E3890300592986 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		38AD50A617E3890300592986 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		38AD50A817E3890300592986 /* rotoCamiPhone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rotoCamiPhone-Prefix.pch"; sourceTree = "<group>"; };
+		38AD50A817E3890300592986 /* toroCamiPhone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "toroCamiPhone-Prefix.pch"; sourceTree = "<group>"; };
 		38AD50A917E3890300592986 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38AD50AA17E3890300592986 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		38AD50AD17E3890300592986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38AD50AF17E3890300592986 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		38AD50B017E3890300592986 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		38AD50B217E3890300592986 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		38AD50B817E3890300592986 /* rotoCamiPhoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rotoCamiPhoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38AD50B817E3890300592986 /* toroCamiPhoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toroCamiPhoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AD50B917E3890300592986 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		38AD50C117E3890300592986 /* rotoCamiPhoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "rotoCamiPhoneTests-Info.plist"; sourceTree = "<group>"; };
+		38AD50C117E3890300592986 /* toroCamiPhoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "toroCamiPhoneTests-Info.plist"; sourceTree = "<group>"; };
 		38AD50C317E3890300592986 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		38AD50C517E3890300592986 /* rotoCamiPhoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rotoCamiPhoneTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,11 +82,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38AC8E9517ECC87900B7A21D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				38AC8E9617ECC89100B7A21D /* simpleShootViewController.h */,
+				38AC8E9717ECC89100B7A21D /* simpleShootViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		38AD508E17E3890300592986 = {
 			isa = PBXGroup;
 			children = (
-				38AD50A017E3890300592986 /* rotoCamiPhone */,
-				38AD50BF17E3890300592986 /* rotoCamiPhoneTests */,
+				38AD50A017E3890300592986 /* toroCamiPhone */,
+				38AD50BF17E3890300592986 /* toroCamiPhoneTests */,
 				38AD509917E3890300592986 /* Frameworks */,
 				38AD509817E3890300592986 /* Products */,
 			);
@@ -92,8 +104,8 @@
 		38AD509817E3890300592986 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				38AD509717E3890300592986 /* rotoCamiPhone.app */,
-				38AD50B817E3890300592986 /* rotoCamiPhoneTests.xctest */,
+				38AD509717E3890300592986 /* toroCamiPhone.app */,
+				38AD50B817E3890300592986 /* toroCamiPhoneTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,9 +121,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		38AD50A017E3890300592986 /* rotoCamiPhone */ = {
+		38AD50A017E3890300592986 /* toroCamiPhone */ = {
 			isa = PBXGroup;
 			children = (
+				38AC8E9517ECC87900B7A21D /* ViewControllers */,
 				38AD50A917E3890300592986 /* AppDelegate.h */,
 				38AD50AA17E3890300592986 /* AppDelegate.m */,
 				38AD50AC17E3890300592986 /* Main.storyboard */,
@@ -120,33 +133,35 @@
 				38AD50B217E3890300592986 /* Images.xcassets */,
 				38AD50A117E3890300592986 /* Supporting Files */,
 			);
+			name = toroCamiPhone;
 			path = rotoCamiPhone;
 			sourceTree = "<group>";
 		};
 		38AD50A117E3890300592986 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				38AD50A217E3890300592986 /* rotoCamiPhone-Info.plist */,
+				38AD50A217E3890300592986 /* toroCamiPhone-Info.plist */,
 				38AD50A317E3890300592986 /* InfoPlist.strings */,
 				38AD50A617E3890300592986 /* main.m */,
-				38AD50A817E3890300592986 /* rotoCamiPhone-Prefix.pch */,
+				38AD50A817E3890300592986 /* toroCamiPhone-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		38AD50BF17E3890300592986 /* rotoCamiPhoneTests */ = {
+		38AD50BF17E3890300592986 /* toroCamiPhoneTests */ = {
 			isa = PBXGroup;
 			children = (
 				38AD50C517E3890300592986 /* rotoCamiPhoneTests.m */,
 				38AD50C017E3890300592986 /* Supporting Files */,
 			);
+			name = toroCamiPhoneTests;
 			path = rotoCamiPhoneTests;
 			sourceTree = "<group>";
 		};
 		38AD50C017E3890300592986 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				38AD50C117E3890300592986 /* rotoCamiPhoneTests-Info.plist */,
+				38AD50C117E3890300592986 /* toroCamiPhoneTests-Info.plist */,
 				38AD50C217E3890300592986 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -155,9 +170,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		38AD509617E3890300592986 /* rotoCamiPhone */ = {
+		38AD509617E3890300592986 /* toroCamiPhone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38AD50C917E3890300592986 /* Build configuration list for PBXNativeTarget "rotoCamiPhone" */;
+			buildConfigurationList = 38AD50C917E3890300592986 /* Build configuration list for PBXNativeTarget "toroCamiPhone" */;
 			buildPhases = (
 				38AD509317E3890300592986 /* Sources */,
 				38AD509417E3890300592986 /* Frameworks */,
@@ -167,14 +182,14 @@
 			);
 			dependencies = (
 			);
-			name = rotoCamiPhone;
+			name = toroCamiPhone;
 			productName = rotoCamiPhone;
-			productReference = 38AD509717E3890300592986 /* rotoCamiPhone.app */;
+			productReference = 38AD509717E3890300592986 /* toroCamiPhone.app */;
 			productType = "com.apple.product-type.application";
 		};
-		38AD50B717E3890300592986 /* rotoCamiPhoneTests */ = {
+		38AD50B717E3890300592986 /* toroCamiPhoneTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38AD50CC17E3890300592986 /* Build configuration list for PBXNativeTarget "rotoCamiPhoneTests" */;
+			buildConfigurationList = 38AD50CC17E3890300592986 /* Build configuration list for PBXNativeTarget "toroCamiPhoneTests" */;
 			buildPhases = (
 				38AD50B417E3890300592986 /* Sources */,
 				38AD50B517E3890300592986 /* Frameworks */,
@@ -185,9 +200,9 @@
 			dependencies = (
 				38AD50BE17E3890300592986 /* PBXTargetDependency */,
 			);
-			name = rotoCamiPhoneTests;
+			name = toroCamiPhoneTests;
 			productName = rotoCamiPhoneTests;
-			productReference = 38AD50B817E3890300592986 /* rotoCamiPhoneTests.xctest */;
+			productReference = 38AD50B817E3890300592986 /* toroCamiPhoneTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -204,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 38AD509217E3890300592986 /* Build configuration list for PBXProject "rotoCamiPhone" */;
+			buildConfigurationList = 38AD509217E3890300592986 /* Build configuration list for PBXProject "toroCamiPhone" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -217,8 +232,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				38AD509617E3890300592986 /* rotoCamiPhone */,
-				38AD50B717E3890300592986 /* rotoCamiPhoneTests */,
+				38AD509617E3890300592986 /* toroCamiPhone */,
+				38AD50B717E3890300592986 /* toroCamiPhoneTests */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38AC8E9817ECC89100B7A21D /* simpleShootViewController.m in Sources */,
 				38AD50B117E3890300592986 /* ViewController.m in Sources */,
 				38AD50AB17E3890300592986 /* AppDelegate.m in Sources */,
 				38AD50A717E3890300592986 /* main.m in Sources */,
@@ -268,7 +284,7 @@
 /* Begin PBXTargetDependency section */
 		38AD50BE17E3890300592986 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 38AD509617E3890300592986 /* rotoCamiPhone */;
+			target = 38AD509617E3890300592986 /* toroCamiPhone */;
 			targetProxy = 38AD50BD17E3890300592986 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -379,9 +395,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "rotoCamiPhone/rotoCamiPhone-Prefix.pch";
-				INFOPLIST_FILE = "rotoCamiPhone/rotoCamiPhone-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "rotoCamiPhone/toroCamiPhone-Prefix.pch";
+				INFOPLIST_FILE = "rotoCamiPhone/toroCamiPhone-Info.plist";
+				PRODUCT_NAME = toroCamiPhone;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -392,9 +408,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "rotoCamiPhone/rotoCamiPhone-Prefix.pch";
-				INFOPLIST_FILE = "rotoCamiPhone/rotoCamiPhone-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "rotoCamiPhone/toroCamiPhone-Prefix.pch";
+				INFOPLIST_FILE = "rotoCamiPhone/toroCamiPhone-Info.plist";
+				PRODUCT_NAME = toroCamiPhone;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -415,8 +431,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "rotoCamiPhoneTests/rotoCamiPhoneTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "rotoCamiPhoneTests/toroCamiPhoneTests-Info.plist";
+				PRODUCT_NAME = toroCamiPhoneTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -434,8 +450,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "rotoCamiPhone/rotoCamiPhone-Prefix.pch";
-				INFOPLIST_FILE = "rotoCamiPhoneTests/rotoCamiPhoneTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "rotoCamiPhoneTests/toroCamiPhoneTests-Info.plist";
+				PRODUCT_NAME = toroCamiPhoneTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -444,7 +460,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		38AD509217E3890300592986 /* Build configuration list for PBXProject "rotoCamiPhone" */ = {
+		38AD509217E3890300592986 /* Build configuration list for PBXProject "toroCamiPhone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38AD50C717E3890300592986 /* Debug */,
@@ -453,21 +469,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38AD50C917E3890300592986 /* Build configuration list for PBXNativeTarget "rotoCamiPhone" */ = {
+		38AD50C917E3890300592986 /* Build configuration list for PBXNativeTarget "toroCamiPhone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38AD50CA17E3890300592986 /* Debug */,
 				38AD50CB17E3890300592986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		38AD50CC17E3890300592986 /* Build configuration list for PBXNativeTarget "rotoCamiPhoneTests" */ = {
+		38AD50CC17E3890300592986 /* Build configuration list for PBXNativeTarget "toroCamiPhoneTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38AD50CD17E3890300592986 /* Debug */,
 				38AD50CE17E3890300592986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

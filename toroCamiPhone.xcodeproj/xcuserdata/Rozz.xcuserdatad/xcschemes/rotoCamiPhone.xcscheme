@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "38AD509617E3890300592986"
-               BuildableName = "rotoCamiPhone.app"
-               BlueprintName = "rotoCamiPhone"
-               ReferencedContainer = "container:rotoCamiPhone.xcodeproj">
+               BuildableName = "toroCamiPhone.app"
+               BlueprintName = "toroCamiPhone"
+               ReferencedContainer = "container:toroCamiPhone.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "38AD50B717E3890300592986"
-               BuildableName = "rotoCamiPhoneTests.xctest"
-               BlueprintName = "rotoCamiPhoneTests"
-               ReferencedContainer = "container:rotoCamiPhone.xcodeproj">
+               BuildableName = "toroCamiPhoneTests.xctest"
+               BlueprintName = "toroCamiPhoneTests"
+               ReferencedContainer = "container:toroCamiPhone.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "38AD509617E3890300592986"
-            BuildableName = "rotoCamiPhone.app"
-            BlueprintName = "rotoCamiPhone"
-            ReferencedContainer = "container:rotoCamiPhone.xcodeproj">
+            BuildableName = "toroCamiPhone.app"
+            BlueprintName = "toroCamiPhone"
+            ReferencedContainer = "container:toroCamiPhone.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "38AD509617E3890300592986"
-            BuildableName = "rotoCamiPhone.app"
-            BlueprintName = "rotoCamiPhone"
-            ReferencedContainer = "container:rotoCamiPhone.xcodeproj">
+            BuildableName = "toroCamiPhone.app"
+            BlueprintName = "toroCamiPhone"
+            ReferencedContainer = "container:toroCamiPhone.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "38AD509617E3890300592986"
-            BuildableName = "rotoCamiPhone.app"
-            BlueprintName = "rotoCamiPhone"
-            ReferencedContainer = "container:rotoCamiPhone.xcodeproj">
+            BuildableName = "toroCamiPhone.app"
+            BlueprintName = "toroCamiPhone"
+            ReferencedContainer = "container:toroCamiPhone.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
