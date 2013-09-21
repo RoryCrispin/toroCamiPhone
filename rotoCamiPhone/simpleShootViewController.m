@@ -39,10 +39,11 @@
     [super viewDidLoad];
     
     timeArray = [[NSMutableArray alloc] init];
-    [timeArray addObject:@"Seconds"];
-    [timeArray addObject:@"Minutes"];
-    [timeArray addObject:@"Hours"];
-    [BulbModePicker selectRow:2 inComponent:0 animated:0];
+    [timeArray addObject:@"0 Seconds"];
+    [timeArray addObject:@"0 Minutes"];
+    [timeArray addObject:@"0 Hours"];
+    [BulbModePickerSet selectRow:2 inComponent:0 animated:0];
+     
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,21 +61,48 @@
     [timeArray replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"%.0f Seconds", bulbModeSliderValue]];
      [timeArray replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"%.0f Minutes", bulbModeSliderValue]];
      [timeArray replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"%.0f Hours", bulbModeSliderValue]];
-    [BulbModePicker reloadAllComponents];
+    [_BulbModePickerObj reloadAllComponents];
 }
 - (IBAction)BulbModeSwitchChange:(id)sender {
     bulbModeBool = _BulbModeSwitch.on;
     [_BulbModeSlider setEnabled:bulbModeBool];
     if (bulbModeBool){
-        [_BulbModePicker setUserInteractionEnabled:YES];
-        [_BulbModePicker setAlpha:1];
+        [_BulbModePickerObj setUserInteractionEnabled:YES];
+        [_BulbModePickerObj setAlpha:1];
     } else {
-        [_BulbModePicker setUserInteractionEnabled:NO];
-        [_BulbModePicker setAlpha:.6];
+        [_BulbModePickerObj setUserInteractionEnabled:NO];
+        [_BulbModePickerObj setAlpha:.6];
+    }
+}
+-(NSString *)bulbModeDelayParse{
+    if (bulbModeBool){
+        NSLog(@"hello?? %d", [_BulbModePickerObj selectedRowInComponent:0]);
+        switch ([_BulbModePickerObj selectedRowInComponent:0]) {
+                //TODO This is VERY inaccurate because I'm multiplying by the floats before rounding them
+                //Floats are prety unpredictable. 
+            case 0: {
+                return [NSString stringWithFormat:@"%.0f",_BulbModeSlider.value];
+                break;
+            }
+            case 1:{
+                return [NSString stringWithFormat:@"%.0f",_BulbModeSlider.value*60];
+                break;
+            }
+            case 2:{
+                return [NSString stringWithFormat:@"%.0f",_BulbModeSlider.value*3600];
+                break;
+            }
+            default:{
+                return @"0";
+                break;
+            }
+        }
+    } else {
+        return @"0";
     }
 }
 
 - (IBAction)captureButtonAction:(id)sender {
-    blueCommsiPhone.
+    [blueCommsiPhone sendMsg:[NSString stringWithFormat:@"1,%.0f,%@,0,0,0,0,0,0!", _TimeDelaySlider.value, [self bulbModeDelayParse]]];
 }
 @end

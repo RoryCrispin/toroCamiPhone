@@ -9,9 +9,8 @@
 #import "blueCommsiPhone.h"
 
 @implementation blueCommsiPhone
--(void)sendMessage:(NSString *)message
-{
-    NSLog(@"%@", message);
++(void)sendMsg:(NSString *)message{
+    NSLog(@"Message: %@",message);
 }
 @end
 

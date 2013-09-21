@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="d9c-KG-pwy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="toroCam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neJ-qh-kG2">
@@ -79,7 +79,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ai8-NP-rjD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hM5-g4-AYE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="toroCam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6B-4s-c0L">
@@ -186,7 +186,7 @@
                         <viewControllerLayoutGuide type="bottom" id="KuC-96-xng"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XGc-2W-tLC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="toroCam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeT-KX-Nx9">
@@ -247,7 +247,7 @@
                                     <action selector="BulbModeSliderChange:" destination="y9k-jn-drZ" eventType="valueChanged" id="z24-C4-YXd"/>
                                 </connections>
                             </slider>
-                            <pickerView userInteractionEnabled="NO" alpha="0.59999999999999998" tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VCG-U4-lyQ">
+                            <pickerView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VCG-U4-lyQ">
                                 <rect key="frame" x="84" y="264" width="157" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -263,7 +263,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsN-kj-0Kl">
-                                <rect key="frame" x="95" y="510" width="130" height="38"/>
+                                <rect key="frame" x="95" y="422" width="130" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Capture" backgroundImage="greenButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -276,7 +276,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="BulbModePicker" destination="VCG-U4-lyQ" id="6nu-NS-DjP"/>
+                        <outlet property="BulbModePickerObj" destination="VCG-U4-lyQ" id="Loi-eO-UOv"/>
                         <outlet property="BulbModeSlider" destination="dby-hJ-FRM" id="fzC-AU-I6R"/>
                         <outlet property="BulbModeSwitch" destination="W4D-l2-u7p" id="OnU-LG-46t"/>
                         <outlet property="TimeDelaySlider" destination="qNI-HP-2cU" id="pvr-WX-JYa"/>
@@ -298,7 +298,7 @@
                         <viewControllerLayoutGuide type="bottom" id="uGV-yI-DW4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JqD-ID-6pj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -322,7 +322,7 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="2WG-gu-8wg"/>

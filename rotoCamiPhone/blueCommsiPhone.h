@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface blueCommsiPhone : NSObject
--(void)sendMessage:(NSString *)message;
++(void)sendMsg:(NSString *)message;
 @end
 
