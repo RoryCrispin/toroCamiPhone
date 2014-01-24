@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		383BEFBE185F9C9A0019B762 /* SerialGATT.m in Sources */ = {isa = PBXBuildFile; fileRef = 383BEFBD185F9C9A0019B762 /* SerialGATT.m */; };
+		3852442917EE09AF00201762 /* SetupOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 3852442817EE09AF00201762 /* SetupOne.m */; };
+		3852442B17EE0A8000201762 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3852442A17EE0A8000201762 /* CoreBluetooth.framework */; };
+		388BB96518226276008DEA28 /* timelapseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388BB96418226276008DEA28 /* timelapseViewController.m */; };
 		38AC8E9817ECC89100B7A21D /* simpleShootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC8E9717ECC89100B7A21D /* simpleShootViewController.m */; };
-		38AC8E9B17ECE9DE00B7A21D /* blueCommsiPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC8E9A17ECE9DE00B7A21D /* blueCommsiPhone.m */; };
 		38AD509B17E3890300592986 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AD509A17E3890300592986 /* Foundation.framework */; };
 		38AD509D17E3890300592986 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AD509C17E3890300592986 /* CoreGraphics.framework */; };
 		38AD509F17E3890300592986 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38AD509E17E3890300592986 /* UIKit.framework */; };
@@ -36,10 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		383BEFBC185F9C9A0019B762 /* SerialGATT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialGATT.h; sourceTree = "<group>"; };
+		383BEFBD185F9C9A0019B762 /* SerialGATT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialGATT.m; sourceTree = "<group>"; };
+		3852442717EE09AF00201762 /* SetupOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupOne.h; sourceTree = "<group>"; };
+		3852442817EE09AF00201762 /* SetupOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupOne.m; sourceTree = "<group>"; };
+		3852442A17EE0A8000201762 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		388BB96318226276008DEA28 /* timelapseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timelapseViewController.h; sourceTree = "<group>"; };
+		388BB96418226276008DEA28 /* timelapseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = timelapseViewController.m; sourceTree = "<group>"; };
 		38AC8E9617ECC89100B7A21D /* simpleShootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = simpleShootViewController.h; sourceTree = "<group>"; };
 		38AC8E9717ECC89100B7A21D /* simpleShootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = simpleShootViewController.m; sourceTree = "<group>"; };
-		38AC8E9917ECE9DE00B7A21D /* blueCommsiPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blueCommsiPhone.h; sourceTree = "<group>"; };
-		38AC8E9A17ECE9DE00B7A21D /* blueCommsiPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = blueCommsiPhone.m; sourceTree = "<group>"; };
 		38AD509717E3890300592986 /* toroCamiPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toroCamiPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AD509A17E3890300592986 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		38AD509C17E3890300592986 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3852442B17EE0A8000201762 /* CoreBluetooth.framework in Frameworks */,
 				38AD509D17E3890300592986 /* CoreGraphics.framework in Frameworks */,
 				38AD509F17E3890300592986 /* UIKit.framework in Frameworks */,
 				38AD509B17E3890300592986 /* Foundation.framework in Frameworks */,
@@ -85,11 +94,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		383BEFBB185F9B670019B762 /* SerialGATT */ = {
+			isa = PBXGroup;
+			children = (
+				383BEFBC185F9C9A0019B762 /* SerialGATT.h */,
+				383BEFBD185F9C9A0019B762 /* SerialGATT.m */,
+			);
+			name = SerialGATT;
+			sourceTree = "<group>";
+		};
 		38AC8E9517ECC87900B7A21D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				38AC8E9617ECC89100B7A21D /* simpleShootViewController.h */,
 				38AC8E9717ECC89100B7A21D /* simpleShootViewController.m */,
+				3852442717EE09AF00201762 /* SetupOne.h */,
+				3852442817EE09AF00201762 /* SetupOne.m */,
+				388BB96318226276008DEA28 /* timelapseViewController.h */,
+				388BB96418226276008DEA28 /* timelapseViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -116,6 +138,7 @@
 		38AD509917E3890300592986 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3852442A17EE0A8000201762 /* CoreBluetooth.framework */,
 				38AD509A17E3890300592986 /* Foundation.framework */,
 				38AD509C17E3890300592986 /* CoreGraphics.framework */,
 				38AD509E17E3890300592986 /* UIKit.framework */,
@@ -127,6 +150,7 @@
 		38AD50A017E3890300592986 /* toroCamiPhone */ = {
 			isa = PBXGroup;
 			children = (
+				383BEFBB185F9B670019B762 /* SerialGATT */,
 				38AC8E9517ECC87900B7A21D /* ViewControllers */,
 				38AD50A917E3890300592986 /* AppDelegate.h */,
 				38AD50AA17E3890300592986 /* AppDelegate.m */,
@@ -135,8 +159,6 @@
 				38AD50B017E3890300592986 /* ViewController.m */,
 				38AD50B217E3890300592986 /* Images.xcassets */,
 				38AD50A117E3890300592986 /* Supporting Files */,
-				38AC8E9917ECE9DE00B7A21D /* blueCommsiPhone.h */,
-				38AC8E9A17ECE9DE00B7A21D /* blueCommsiPhone.m */,
 			);
 			name = toroCamiPhone;
 			path = rotoCamiPhone;
@@ -271,9 +293,11 @@
 			files = (
 				38AC8E9817ECC89100B7A21D /* simpleShootViewController.m in Sources */,
 				38AD50B117E3890300592986 /* ViewController.m in Sources */,
-				38AC8E9B17ECE9DE00B7A21D /* blueCommsiPhone.m in Sources */,
 				38AD50AB17E3890300592986 /* AppDelegate.m in Sources */,
+				388BB96518226276008DEA28 /* timelapseViewController.m in Sources */,
+				3852442917EE09AF00201762 /* SetupOne.m in Sources */,
 				38AD50A717E3890300592986 /* main.m in Sources */,
+				383BEFBE185F9C9A0019B762 /* SerialGATT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

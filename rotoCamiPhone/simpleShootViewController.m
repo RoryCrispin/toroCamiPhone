@@ -7,7 +7,6 @@
 //
 
 #import "simpleShootViewController.h"
-#import "blueCommsiPhone.h"
 
 @interface simpleShootViewController ()
 
@@ -103,6 +102,6 @@
 }
 
 - (IBAction)captureButtonAction:(id)sender {
-    [blueCommsiPhone sendMsg:[NSString stringWithFormat:@"1,%.0f,%@,0,0,0,0,0,0!", _TimeDelaySlider.value, [self bulbModeDelayParse]]];
+   // [blueCommsiPhone sendMsg:[NSString stringWithFormat:@"1,%.0f,%@,0,0,0,0,0,0!", _TimeDelaySlider.value, [self bulbModeDelayParse]]];
 }
 @end

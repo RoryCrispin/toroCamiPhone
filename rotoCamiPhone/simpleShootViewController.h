@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "blueCommsiPhone.h"
 #define TIMEARRAY 0
 
 float bulbModeSliderValue;
