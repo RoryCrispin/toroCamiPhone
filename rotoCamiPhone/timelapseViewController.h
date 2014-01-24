@@ -7,8 +7,22 @@
 //
 
 #import "ViewController.h"
+NSMutableArray *hoursArray;
+NSMutableArray *minsArray;
+NSMutableArray *secsArray;
 
-@interface timelapseViewController : ViewController
-- (IBAction)delaySliderChange:(id)sender;
+NSTimeInterval interval;
+
+@interface timelapseViewController : ViewController <UIPickerViewDataSource,UIPickerViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UISlider *UTLshotsSliderChanged;
+@property (weak, nonatomic) IBOutlet UIPickerView *UTLtimeDelayPicker;
+
+@property(retain, nonatomic) NSMutableArray *hoursArray;
+@property(retain, nonatomic) NSMutableArray *minsArray;
+@property(retain, nonatomic) NSMutableArray *secsArray;
+- (IBAction)UTLbackButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *UTLtoggleCaptureAction;
+@property (weak, nonatomic) IBOutlet UIButton *UTLtoggleButton;
 
 @end

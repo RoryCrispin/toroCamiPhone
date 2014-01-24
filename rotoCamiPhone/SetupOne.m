@@ -34,8 +34,6 @@
     [sensor setup];
     
     peripheralViewControllerArray = [[NSMutableArray alloc] init];
-    [peripheralViewControllerArray addObject:@"Hello"];
-    
     DevicePicker.delegate = self;
     DevicePicker.dataSource = self;
 }
@@ -47,7 +45,6 @@
 }
 -(void) peripheralFound:(CBPeripheral *)peripheral
 {
-    printf("PERIPHERALDELEGATE");
     //BLEDeviceViewController *controller = [[BLEDeviceViewController alloc] init];
     //controller.peripheral = peripheral;
     //controller.sensor = sensor;

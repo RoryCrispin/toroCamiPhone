@@ -241,6 +241,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = rotoCam;
 				TargetAttributes = {
+					38AD509617E3890300592986 = {
+						DevelopmentTeam = PC5338GUAJ;
+					};
 					38AD50B717E3890300592986 = {
 						TestTargetID = 38AD509617E3890300592986;
 					};
@@ -424,6 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "rotoCamiPhone/toroCamiPhone-Prefix.pch";
 				INFOPLIST_FILE = "rotoCamiPhone/toroCamiPhone-Info.plist";
@@ -437,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "rotoCamiPhone/toroCamiPhone-Prefix.pch";
 				INFOPLIST_FILE = "rotoCamiPhone/toroCamiPhone-Info.plist";
