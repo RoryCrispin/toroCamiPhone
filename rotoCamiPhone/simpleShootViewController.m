@@ -7,13 +7,14 @@
 //
 
 #import "simpleShootViewController.h"
-
+#import "SerialGATT.h"
+#import "AppDelegate.h"
 @interface simpleShootViewController ()
 
 @end
 
 @implementation simpleShootViewController
-
+@synthesize sensor;
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
 }
@@ -36,13 +37,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    sensor = [[SerialGATT alloc] init];
+    sensor.activePeripheral = appDelegate.activPeri;
+    
+    NSLog(@"%@",self.sensor.activePeripheral.name);
     
     timeArray = [[NSMutableArray alloc] init];
     [timeArray addObject:@"0 Seconds"];
     [timeArray addObject:@"0 Minutes"];
     [timeArray addObject:@"0 Hours"];
     [BulbModePickerSet selectRow:2 inComponent:0 animated:0];
-     
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,5 +111,29 @@
 
 - (IBAction)captureButtonAction:(id)sender {
    // [blueCommsiPhone sendMsg:[NSString stringWithFormat:@"1,%.0f,%@,0,0,0,0,0,0!", _TimeDelaySlider.value, [self bulbModeDelayParse]]];
+    
+    printf("Connected");
+    NSData *data = [@"L" dataUsingEncoding:[NSString defaultCStringEncoding]];
+    if(data.length > 20)
+    {
+        int i = 0;
+        while ((i + 1) * 20 <= data.length) {
+            NSData *dataSend = [data subdataWithRange:NSMakeRange(i * 20, 20)];
+            [sensor write:sensor.activePeripheral data:dataSend];
+            i++;
+        }
+        i = data.length % 20;
+        if(i > 0)
+        {
+            NSData *dataSend = [data subdataWithRange:NSMakeRange(data.length - i, i)];
+            [sensor write:sensor.activePeripheral data:dataSend];
+        }
+        
+    }else
+    {
+        //NSData *data = [MsgToArduino.text dataUsingEncoding:[NSString defaultCStringEncoding]];
+        [sensor write:sensor.activePeripheral data:data];
+    }
+
 }
 @end

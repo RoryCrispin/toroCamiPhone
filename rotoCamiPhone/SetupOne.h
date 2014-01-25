@@ -22,7 +22,8 @@
 @property (nonatomic, retain) NSMutableArray *
 peripheralViewControllerArray;
 @property (weak, nonatomic) IBOutlet UIButton *ScanButton;
-
+- (void)dgStart;
+-(void)sendD:(NSString *)dat;
 
 - (IBAction)actionSetupOneScan:(id)sender;
 

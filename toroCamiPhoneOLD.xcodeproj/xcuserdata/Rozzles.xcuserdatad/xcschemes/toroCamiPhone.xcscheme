@@ -17,7 +17,7 @@
                BlueprintIdentifier = "38AD509617E3890300592986"
                BuildableName = "toroCamiPhone.app"
                BlueprintName = "toroCamiPhone"
-               ReferencedContainer = "container:toroCamiPhone.xcodeproj">
+               ReferencedContainer = "container:toroCamiPhoneOLD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "38AD50B717E3890300592986"
                BuildableName = "toroCamiPhoneTests.xctest"
                BlueprintName = "toroCamiPhoneTests"
-               ReferencedContainer = "container:toroCamiPhone.xcodeproj">
+               ReferencedContainer = "container:toroCamiPhoneOLD.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "38AD509617E3890300592986"
             BuildableName = "toroCamiPhone.app"
             BlueprintName = "toroCamiPhone"
-            ReferencedContainer = "container:toroCamiPhone.xcodeproj">
+            ReferencedContainer = "container:toroCamiPhoneOLD.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "38AD509617E3890300592986"
             BuildableName = "toroCamiPhone.app"
             BlueprintName = "toroCamiPhone"
-            ReferencedContainer = "container:toroCamiPhone.xcodeproj">
+            ReferencedContainer = "container:toroCamiPhoneOLD.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -82,7 +82,7 @@
             BlueprintIdentifier = "38AD509617E3890300592986"
             BuildableName = "toroCamiPhone.app"
             BlueprintName = "toroCamiPhone"
-            ReferencedContainer = "container:toroCamiPhone.xcodeproj">
+            ReferencedContainer = "container:toroCamiPhoneOLD.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

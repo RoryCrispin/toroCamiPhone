@@ -8,6 +8,7 @@
 
 #import "SetupOne.h"
 #import "SerialGATT.h"
+#import "AppDelegate.h"
 @interface SetupOne ()
 
 @end
@@ -16,6 +17,7 @@
 @synthesize peripheralViewControllerArray;
 @synthesize sensor;
 @synthesize DevicePicker;  
+AppDelegate *appDelegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,10 +34,37 @@
 	// Do any additional setup after loading the view.
     sensor = [[SerialGATT alloc] init];
     [sensor setup];
-    
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     peripheralViewControllerArray = [[NSMutableArray alloc] init];
     DevicePicker.delegate = self;
     DevicePicker.dataSource = self;
+}
+-(void)setConnect
+{
+    appDelegate.activPeri = sensor.activePeripheral;
+    printf("Connected");
+    NSData *data = [@"H" dataUsingEncoding:[NSString defaultCStringEncoding]];
+    if(data.length > 20)
+    {
+        int i = 0;
+        while ((i + 1) * 20 <= data.length) {
+            NSData *dataSend = [data subdataWithRange:NSMakeRange(i * 20, 20)];
+            [sensor write:sensor.activePeripheral data:dataSend];
+            i++;
+        }
+        i = data.length % 20;
+        if(i > 0)
+        {
+            NSData *dataSend = [data subdataWithRange:NSMakeRange(data.length - i, i)];
+            [sensor write:sensor.activePeripheral data:dataSend];
+        }
+        
+    }else
+    {
+        //NSData *data = [MsgToArduino.text dataUsingEncoding:[NSString defaultCStringEncoding]];
+        [sensor write:sensor.activePeripheral data:data];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,7 +79,7 @@
     //controller.sensor = sensor;
     [peripheralViewControllerArray addObject:[peripheral name]];
     [DevicePicker reloadAllComponents];
-    
+    [sensor connect:peripheral];
 }
 
 - (IBAction)actionSetupOneScan:(id)sender {
@@ -77,6 +106,12 @@
     [sensor findHMSoftPeripherals:5];
 }
 
+- (void)dgStart {
+    sensor.delegate = self;
+    printf("now we are searching device...\n");
+    [sensor findHMSoftPeripherals:5];
+}
+
 -(void) scanTimer:(NSTimer *)timer
 {
     //[Scan setTitle:@"Scan"];
@@ -92,7 +127,7 @@
 
 - (void)pickerView:(UIPickerView *)DevicePicker didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    printf("Selected obj");
+    
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)DevicePicker
@@ -103,6 +138,37 @@
 - (NSInteger)pickerView:(UIPickerView *)DevicePicker numberOfRowsInComponent:(NSInteger)component
 {
     return [peripheralViewControllerArray count];
+}
+//TODO Delete this
+-(void)sendD:(NSString *)dat
+{
+    sensor = [[SerialGATT alloc] init];
+    [sensor setup];
+    
+    printf("Connected");
+    NSData *data = [dat dataUsingEncoding:[NSString defaultCStringEncoding]];
+    if(data.length > 20)
+    {
+        int i = 0;
+        while ((i + 1) * 20 <= data.length) {
+            NSData *dataSend = [data subdataWithRange:NSMakeRange(i * 20, 20)];
+            [sensor write:sensor.activePeripheral data:dataSend];
+            i++;
+        }
+        i = data.length % 20;
+        if(i > 0)
+        {
+            NSData *dataSend = [data subdataWithRange:NSMakeRange(data.length - i, i)];
+            [sensor write:sensor.activePeripheral data:dataSend];
+        }
+        
+    }else
+    {
+        //NSData *data = [MsgToArduino.text dataUsingEncoding:[NSString defaultCStringEncoding]];
+        [sensor write:sensor.activePeripheral data:data];
+    }
+
+
 }
 
 
