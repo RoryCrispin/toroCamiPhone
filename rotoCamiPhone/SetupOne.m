@@ -104,7 +104,6 @@ AppDelegate *appDelegate;
 - (void)pickerView:(UIPickerView *)DevicePicker didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     pickerPosition = row;
-    NSLog(@" Row: %i %@", row, [[peripheralArray objectAtIndex:row] name]);
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)DevicePicker

@@ -10,10 +10,16 @@
 #import "SerialGATT.h"
 #import "AppDelegate.h"
 
+#import "simpleShootViewController.h"
+#import "timelapseViewController.h"
+
 SerialGATT *sensor;
 
 @implementation BlueComms
 AppDelegate *appDelegate;
+
+simpleShootViewController *ssView1;
+timelapseViewController *ssView2;
 
 -(void) sendMessage:(NSString *)message
 {
@@ -22,14 +28,9 @@ AppDelegate *appDelegate;
 
 -(void) setUp
 {
-    NSLog(@"Setting up BlueComms");
     sensor = [[SerialGATT alloc] init];
-    NSLog(@"%@", sensor.delegate);
     sensor.delegate = self;
-    NSLog(@"%@", sensor.delegate);
     [sensor setup];
-    
-    
     appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     sensor.activePeripheral = appDelegate.activePeripheral;
     if (sensor.activePeripheral.state == CBPeripheralStateConnected)
@@ -40,6 +41,35 @@ AppDelegate *appDelegate;
     {
         printf("Not connected");
     }
+}
+
+//-(void) didRecieveMessage:(NSString *) recvMessage
+-(void) didRecieveMessage
+{
+    /*switch (_openView)
+    {
+        case 1:
+            if (ssView1 == nil)
+            {
+             ssView1 = [[simpleShootViewController alloc] init];
+            }
+            else
+            {
+               [ssView1 didReceiveMessage:recvMessage];
+            }
+            break;
+        case 2:
+            if (ssView2 == nil)
+            {
+                ssView2 = [[timelapseViewController alloc] init];
+            }
+            else
+            {
+                [ssView2 didReceiveMessage:recvMessage];
+            }
+            break;
+    }
+     */
 }
 
 //Delegate Methods

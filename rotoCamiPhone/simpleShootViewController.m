@@ -24,7 +24,9 @@ BlueComms *bluecomms;
     
     
     bluecomms = [[BlueComms alloc] init];
+    bluecomms.openView = 1;
     [bluecomms setUp];
+     bluecomms.openView = 1;
     
     timeArray = [[NSMutableArray alloc] init];
     [timeArray addObject:@"0 Seconds"];
@@ -39,6 +41,8 @@ BlueComms *bluecomms;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
@@ -85,7 +89,6 @@ BlueComms *bluecomms;
 }
 -(NSString *)bulbModeDelayParse{
     if (bulbModeBool){
-        NSLog(@"hello?? %d", [_BulbModePickerObj selectedRowInComponent:0]);
         switch ([_BulbModePickerObj selectedRowInComponent:0]) {
                 //TODO This is VERY inaccurate because I'm multiplying by the floats before rounding them
                 //Floats are prety unpredictable. 
@@ -112,7 +115,6 @@ BlueComms *bluecomms;
 }
 
 - (IBAction)captureButtonAction:(id)sender {
-    UIView *topView = appDelegate.navigationController.topViewController.view;
-    [bluecomms write:[NSString stringWithFormat:@"1,%.0f,%@,0,0,0,0,0,0!", _TimeDelaySlider.value, [self bulbModeDelayParse]]];
+    [bluecomms write:[NSString stringWithFormat:@"1,%.0f,%@!", _TimeDelaySlider.value, [self bulbModeDelayParse]]];
 }
 @end

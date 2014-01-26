@@ -28,7 +28,9 @@ BlueComms *bluecomms;
     UTLtimeDelayArray = [NSArray arrayWithObjects: 0, 0, 0, nil];
     
     bluecomms = [[BlueComms alloc] init];
+    bluecomms.openView = 2;
     [bluecomms setUp];
+    
     
     //Load the arrays with 1-60 values for sec/min/hrs
     hoursArray = [[NSMutableArray alloc] init];
@@ -48,6 +50,12 @@ BlueComms *bluecomms;
     }
     
 }
+
+-(void)didReceiveMessage:(NSString *) message
+{
+    NSLog(@"Direct message to TimeLapse %@", message);
+}
+
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)UTLtimeDelayPicker
 {

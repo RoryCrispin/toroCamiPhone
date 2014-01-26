@@ -7,6 +7,7 @@
 //
 
 #import "SerialGATT.h"
+#import "BlueComms.h"
 
 @implementation SerialGATT
 
@@ -14,6 +15,7 @@
 @synthesize peripherals;
 @synthesize manager;
 @synthesize activePeripheral;
+
 
 
 /*!
@@ -40,6 +42,7 @@
 
 -(void) setup
 {
+    
     manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
 }
 
@@ -49,7 +52,7 @@
  */
 -(int) findHMSoftPeripherals:(int)timeout
 {
-    NSLog(@"out:");
+
     if ([manager state] != CBCentralManagerStatePoweredOn) {
         printf("CoreBluetooth is not correctly initialized !\n");
         return -1;
@@ -79,8 +82,9 @@
  *
  *  @discussion printPeripheralInfo prints detailed info about peripheral
  *
- */
+ 
 - (void) printPeripheralInfo:(CBPeripheral*)peripheral {
+   
     CFStringRef s = CFUUIDCreateString(NULL, (__bridge CFUUIDRef )peripheral.identifier);
     printf("------------------------------------\r\n");
     printf("Peripheral Info :\r\n");
@@ -91,6 +95,7 @@
     printf("-------------------------------------\r\n");
     
 }
+ */
 
 /*
  * connect
@@ -191,7 +196,7 @@
     [activePeripheral discoverServices:nil];
     //[self notify:peripheral on:YES];
     
-    [self printPeripheralInfo:peripheral];
+    //[self printPeripheralInfo:peripheral];
     
     printf("connected to the active peripheral\n");
 }
@@ -219,11 +224,13 @@
 
 -(void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
 {
+    //NSString *value = [[NSString alloc] initWithData:characteristic.value encoding:NSASCIIStringEncoding];
+   
     
-    NSString *value = [[NSString alloc] initWithData:characteristic.value encoding:NSASCIIStringEncoding];
-    NSLog(@"Recieved Data : %@ : End recieve", value);
-    printf("in updateValueForCharacteristic function\n");
-    
+    //[bluecomms didRecieveData:value];
+    //BlueComms * bluecomms = ;
+   // [[[BlueComms alloc] init] didRecieveData];
+   /*
     if (error) {
         printf("updateValueForCharacteristic failed\n");
         return;
@@ -234,7 +241,7 @@
     @catch (NSException *exception) {
         NSLog(@"Couldn't find delegate. didUpdateValueForCharacteristic");
     }
-    
+    */
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////

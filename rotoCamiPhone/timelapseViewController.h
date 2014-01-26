@@ -24,5 +24,5 @@ NSTimeInterval interval;
 - (IBAction)UTLbackButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *UTLtoggleButton;
 - (IBAction)UTLtoggleButtonAction:(id)sender;
-
+-(void)didReceiveMessage:(NSString *) message;
 @end
