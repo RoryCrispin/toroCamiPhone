@@ -22,7 +22,7 @@ NSTimeInterval interval;
 @property(retain, nonatomic) NSMutableArray *minsArray;
 @property(retain, nonatomic) NSMutableArray *secsArray;
 - (IBAction)UTLbackButton:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *UTLtoggleCaptureAction;
 @property (weak, nonatomic) IBOutlet UIButton *UTLtoggleButton;
+- (IBAction)UTLtoggleButtonAction:(id)sender;
 
 @end

@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0494864A1893B61D0012F635 /* BlueComms.m in Sources */ = {isa = PBXBuildFile; fileRef = 049486491893B61D0012F635 /* BlueComms.m */; };
-		0494864D1893CE4A0012F635 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0494864C1893CE4A0012F635 /* Main_iPad.storyboard */; };
+		0429CC031893E51E001E2C41 /* FlatHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 0429CC021893E51E001E2C41 /* FlatHome.m */; };
+		0429CC061893FC82001E2C41 /* BlueComms.m in Sources */ = {isa = PBXBuildFile; fileRef = 0429CC051893FC82001E2C41 /* BlueComms.m */; };
+		0429CC08189458DE001E2C41 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0429CC07189458DE001E2C41 /* Accelerate.framework */; };
+		0429CC1618945975001E2C41 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0429CC0B18945975001E2C41 /* RECommonFunctions.m */; };
+		0429CC1718945975001E2C41 /* REFrostedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0429CC0D18945975001E2C41 /* REFrostedContainerViewController.m */; };
+		0429CC1818945975001E2C41 /* REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0429CC0F18945975001E2C41 /* REFrostedViewController.m */; };
+		0429CC1918945975001E2C41 /* UIImage+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0429CC1118945975001E2C41 /* UIImage+REFrostedViewController.m */; };
+		0429CC1A18945975001E2C41 /* UIView+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0429CC1318945975001E2C41 /* UIView+REFrostedViewController.m */; };
+		0429CC1B18945975001E2C41 /* UIViewController+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0429CC1518945975001E2C41 /* UIViewController+REFrostedViewController.m */; };
 		383BEFBE185F9C9A0019B762 /* SerialGATT.m in Sources */ = {isa = PBXBuildFile; fileRef = 383BEFBD185F9C9A0019B762 /* SerialGATT.m */; };
 		3852442917EE09AF00201762 /* SetupOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 3852442817EE09AF00201762 /* SetupOne.m */; };
 		3852442B17EE0A8000201762 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3852442A17EE0A8000201762 /* CoreBluetooth.framework */; };
@@ -41,9 +48,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		049486481893B61D0012F635 /* BlueComms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueComms.h; sourceTree = "<group>"; };
-		049486491893B61D0012F635 /* BlueComms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueComms.m; sourceTree = "<group>"; };
-		0494864C1893CE4A0012F635 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		0429CC011893E51E001E2C41 /* FlatHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlatHome.h; sourceTree = "<group>"; };
+		0429CC021893E51E001E2C41 /* FlatHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlatHome.m; sourceTree = "<group>"; };
+		0429CC041893FC82001E2C41 /* BlueComms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueComms.h; sourceTree = "<group>"; };
+		0429CC051893FC82001E2C41 /* BlueComms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueComms.m; sourceTree = "<group>"; };
+		0429CC07189458DE001E2C41 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		0429CC0A18945975001E2C41 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		0429CC0B18945975001E2C41 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		0429CC0C18945975001E2C41 /* REFrostedContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedContainerViewController.h; sourceTree = "<group>"; };
+		0429CC0D18945975001E2C41 /* REFrostedContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REFrostedContainerViewController.m; sourceTree = "<group>"; };
+		0429CC0E18945975001E2C41 /* REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedViewController.h; sourceTree = "<group>"; };
+		0429CC0F18945975001E2C41 /* REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REFrostedViewController.m; sourceTree = "<group>"; };
+		0429CC1018945975001E2C41 /* UIImage+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+REFrostedViewController.h"; sourceTree = "<group>"; };
+		0429CC1118945975001E2C41 /* UIImage+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+REFrostedViewController.m"; sourceTree = "<group>"; };
+		0429CC1218945975001E2C41 /* UIView+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+REFrostedViewController.h"; sourceTree = "<group>"; };
+		0429CC1318945975001E2C41 /* UIView+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+REFrostedViewController.m"; sourceTree = "<group>"; };
+		0429CC1418945975001E2C41 /* UIViewController+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+REFrostedViewController.h"; sourceTree = "<group>"; };
+		0429CC1518945975001E2C41 /* UIViewController+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+REFrostedViewController.m"; sourceTree = "<group>"; };
 		383BEFBC185F9C9A0019B762 /* SerialGATT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialGATT.h; sourceTree = "<group>"; };
 		383BEFBD185F9C9A0019B762 /* SerialGATT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialGATT.m; sourceTree = "<group>"; };
 		3852442717EE09AF00201762 /* SetupOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupOne.h; sourceTree = "<group>"; };
@@ -79,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0429CC08189458DE001E2C41 /* Accelerate.framework in Frameworks */,
 				3852442B17EE0A8000201762 /* CoreBluetooth.framework in Frameworks */,
 				38AD509D17E3890300592986 /* CoreGraphics.framework in Frameworks */,
 				38AD509F17E3890300592986 /* UIKit.framework in Frameworks */,
@@ -99,11 +121,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0494864B1893CC780012F635 /* iPad */ = {
+		0429CC0918945975001E2C41 /* REFrostedViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0429CC0A18945975001E2C41 /* RECommonFunctions.h */,
+				0429CC0B18945975001E2C41 /* RECommonFunctions.m */,
+				0429CC0C18945975001E2C41 /* REFrostedContainerViewController.h */,
+				0429CC0D18945975001E2C41 /* REFrostedContainerViewController.m */,
+				0429CC0E18945975001E2C41 /* REFrostedViewController.h */,
+				0429CC0F18945975001E2C41 /* REFrostedViewController.m */,
+				0429CC1018945975001E2C41 /* UIImage+REFrostedViewController.h */,
+				0429CC1118945975001E2C41 /* UIImage+REFrostedViewController.m */,
+				0429CC1218945975001E2C41 /* UIView+REFrostedViewController.h */,
+				0429CC1318945975001E2C41 /* UIView+REFrostedViewController.m */,
+				0429CC1418945975001E2C41 /* UIViewController+REFrostedViewController.h */,
+				0429CC1518945975001E2C41 /* UIViewController+REFrostedViewController.m */,
 			);
-			name = iPad;
+			path = REFrostedViewController;
 			sourceTree = "<group>";
 		};
 		383BEFBB185F9B670019B762 /* SerialGATT */ = {
@@ -118,10 +152,10 @@
 		38AC8E9517ECC87900B7A21D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0429CC011893E51E001E2C41 /* FlatHome.h */,
+				0429CC021893E51E001E2C41 /* FlatHome.m */,
 				38AC8E9617ECC89100B7A21D /* simpleShootViewController.h */,
 				38AC8E9717ECC89100B7A21D /* simpleShootViewController.m */,
-				049486481893B61D0012F635 /* BlueComms.h */,
-				049486491893B61D0012F635 /* BlueComms.m */,
 				3852442717EE09AF00201762 /* SetupOne.h */,
 				3852442817EE09AF00201762 /* SetupOne.m */,
 				388BB96318226276008DEA28 /* timelapseViewController.h */,
@@ -152,6 +186,8 @@
 		38AD509917E3890300592986 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0429CC0918945975001E2C41 /* REFrostedViewController */,
+				0429CC07189458DE001E2C41 /* Accelerate.framework */,
 				3852442A17EE0A8000201762 /* CoreBluetooth.framework */,
 				38AD509A17E3890300592986 /* Foundation.framework */,
 				38AD509C17E3890300592986 /* CoreGraphics.framework */,
@@ -164,13 +200,13 @@
 		38AD50A017E3890300592986 /* toroCamiPhone */ = {
 			isa = PBXGroup;
 			children = (
-				0494864B1893CC780012F635 /* iPad */,
 				383BEFBB185F9B670019B762 /* SerialGATT */,
 				38AC8E9517ECC87900B7A21D /* ViewControllers */,
 				38AD50A917E3890300592986 /* AppDelegate.h */,
 				38AD50AA17E3890300592986 /* AppDelegate.m */,
 				38AD50AC17E3890300592986 /* Main.storyboard */,
-				0494864C1893CE4A0012F635 /* Main_iPad.storyboard */,
+				0429CC041893FC82001E2C41 /* BlueComms.h */,
+				0429CC051893FC82001E2C41 /* BlueComms.m */,
 				38AD50AF17E3890300592986 /* ViewController.h */,
 				38AD50B017E3890300592986 /* ViewController.m */,
 				38AD50B217E3890300592986 /* Images.xcassets */,
@@ -257,20 +293,12 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = rotoCam;
 				TargetAttributes = {
-					38AD509617E3890300592986 = {
-						DevelopmentTeam = PC5338GUAJ;
-						SystemCapabilities = {
-							com.apple.BackgroundModes = {
-								enabled = 1;
-							};
-						};
-					};
 					38AD50B717E3890300592986 = {
 						TestTargetID = 38AD509617E3890300592986;
 					};
 				};
 			};
-			buildConfigurationList = 38AD509217E3890300592986 /* Build configuration list for PBXProject "toroCamiPhoneOLD" */;
+			buildConfigurationList = 38AD509217E3890300592986 /* Build configuration list for PBXProject "toroCamiPhone" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -295,7 +323,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				38AD50B317E3890300592986 /* Images.xcassets in Resources */,
-				0494864D1893CE4A0012F635 /* Main_iPad.storyboard in Resources */,
 				38AD50A517E3890300592986 /* InfoPlist.strings in Resources */,
 				38AD50AE17E3890300592986 /* Main.storyboard in Resources */,
 			);
@@ -316,13 +343,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0429CC1B18945975001E2C41 /* UIViewController+REFrostedViewController.m in Sources */,
+				0429CC061893FC82001E2C41 /* BlueComms.m in Sources */,
+				0429CC1618945975001E2C41 /* RECommonFunctions.m in Sources */,
 				38AC8E9817ECC89100B7A21D /* simpleShootViewController.m in Sources */,
+				0429CC1718945975001E2C41 /* REFrostedContainerViewController.m in Sources */,
 				38AD50B117E3890300592986 /* ViewController.m in Sources */,
+				0429CC1818945975001E2C41 /* REFrostedViewController.m in Sources */,
 				38AD50AB17E3890300592986 /* AppDelegate.m in Sources */,
 				388BB96518226276008DEA28 /* timelapseViewController.m in Sources */,
 				3852442917EE09AF00201762 /* SetupOne.m in Sources */,
-				0494864A1893B61D0012F635 /* BlueComms.m in Sources */,
+				0429CC1918945975001E2C41 /* UIImage+REFrostedViewController.m in Sources */,
+				0429CC031893E51E001E2C41 /* FlatHome.m in Sources */,
 				38AD50A717E3890300592986 /* main.m in Sources */,
+				0429CC1A18945975001E2C41 /* UIView+REFrostedViewController.m in Sources */,
 				383BEFBE185F9C9A0019B762 /* SerialGATT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,13 +484,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "rotoCamiPhone/toroCamiPhone-Prefix.pch";
 				INFOPLIST_FILE = "rotoCamiPhone/toroCamiPhone-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = toroCamiPhone;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -466,13 +497,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "rotoCamiPhone/toroCamiPhone-Prefix.pch";
 				INFOPLIST_FILE = "rotoCamiPhone/toroCamiPhone-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = toroCamiPhone;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -522,7 +550,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		38AD509217E3890300592986 /* Build configuration list for PBXProject "toroCamiPhoneOLD" */ = {
+		38AD509217E3890300592986 /* Build configuration list for PBXProject "toroCamiPhone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38AD50C717E3890300592986 /* Debug */,

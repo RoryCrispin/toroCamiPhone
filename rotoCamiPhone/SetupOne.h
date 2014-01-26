@@ -16,15 +16,16 @@
 @property (nonatomic, retain) CBPeripheral *peripheral;
 @property (weak, nonatomic) IBOutlet UIPickerView *DevicePicker;
 
-
 @property (strong, nonatomic) SerialGATT *sensor;
-//@property (strong, nonatomic) SetupOne *controller;
 @property (nonatomic, retain) NSMutableArray *
 peripheralViewControllerArray;
+@property (nonatomic, retain) NSMutableArray *
+peripheralArray;
 @property (weak, nonatomic) IBOutlet UIButton *ScanButton;
-- (void)dgStart;
--(void)sendD:(NSString *)dat;
+- (IBAction)SetupOneConnectAction:(id)sender;
+
 
 - (IBAction)actionSetupOneScan:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *SetupOneScanConnectButton;
 
 @end 

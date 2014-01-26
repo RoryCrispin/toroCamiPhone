@@ -10,5 +10,8 @@
 #import "SerialGATT.h"
 
 @interface BlueComms : NSObject
-
+-(void) sendMessage: (NSString *)message;
+-(void) setUp ;
+- (void) setDisconnect ;
+-(void) write:(NSString *)dataToWrite;
 @end

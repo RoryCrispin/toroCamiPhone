@@ -54,7 +54,7 @@
         printf("CoreBluetooth is not correctly initialized !\n");
         return -1;
     }
-   
+    
     [NSTimer scheduledTimerWithTimeInterval:(float)timeout target:self selector:@selector(scanTimer:) userInfo:nil repeats:NO];
     
     //[manager scanForPeripheralsWithServices:[NSArray arrayWithObject:serviceUUID] options:0]; // start Scanning
@@ -200,7 +200,13 @@
 {
     printf("disconnected to the active peripheral\n");
     if(activePeripheral != nil)
-        [delegate setDisconnect];
+        @try
+        {
+            [delegate setDisconnect];
+        }
+    @catch (NSException *exception) {
+        NSLog(@"No Delegate found. Disconnected peripheral");
+    }
     activePeripheral = nil;
 }
 
@@ -213,14 +219,21 @@
 
 -(void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
 {
+    
+    NSString *value = [[NSString alloc] initWithData:characteristic.value encoding:NSASCIIStringEncoding];
+    NSLog(@"Recieved Data : %@ : End recieve", value);
     printf("in updateValueForCharacteristic function\n");
     
     if (error) {
         printf("updateValueForCharacteristic failed\n");
         return;
     }
-    [delegate serialGATTCharValueUpdated:@"FFE1" value:characteristic.value];
-    
+    @try {
+        [delegate serialGATTCharValueUpdated:@"FFE1" value:characteristic.value];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Couldn't find delegate. didUpdateValueForCharacteristic");
+    }
     
 }
 
@@ -322,14 +335,20 @@
 {
     if (!error) {
         printf("Updated notification state for characteristic with UUID %s on service with  UUID %s on peripheral with UUID %s\r\n",[self CBUUIDToString:characteristic.UUID],[self CBUUIDToString:characteristic.service.UUID],[self UUIDToString:(__bridge CFUUIDRef )peripheral.identifier]);
-        [delegate setConnect];
+        @try
+        {
+            [delegate setConnect];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"No Delegate found. Connected peripheral");
+        }
+
     }
     else {
         printf("Error in setting notification state for characteristic with UUID %s on service with  UUID %s on peripheral with UUID %s\r\n",[self CBUUIDToString:characteristic.UUID],[self CBUUIDToString:characteristic.service.UUID],[self UUIDToString:(__bridge CFUUIDRef )peripheral.identifier]);
         printf("Error code was %s\r\n",[[error description] cStringUsingEncoding:NSStringEncodingConversionAllowLossy]);
     }
 }
-
 
 /*
  *  @method CBUUIDToString

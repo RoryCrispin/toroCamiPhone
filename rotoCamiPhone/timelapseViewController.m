@@ -7,22 +7,28 @@
 //
 
 #import "timelapseViewController.h"
-
+#import "BlueComms.h"
 
 @implementation timelapseViewController
 @synthesize hoursArray;
 @synthesize minsArray;
 @synthesize secsArray;
+@synthesize UTLtimeDelayPicker;
 NSArray *UTLtimeDelayArray;
+BlueComms *bluecomms;
+
 
 -(void)viewDidLoad
 
 {
     [super viewDidLoad];
-    _UTLtimeDelayPicker.delegate = self;
-    _UTLtimeDelayPicker.dataSource = self;
+    UTLtimeDelayPicker.delegate = self;
+    UTLtimeDelayPicker.dataSource = self;
     
     UTLtimeDelayArray = [NSArray arrayWithObjects: 0, 0, 0, nil];
+    
+    bluecomms = [[BlueComms alloc] init];
+    [bluecomms setUp];
     
     //Load the arrays with 1-60 values for sec/min/hrs
     hoursArray = [[NSMutableArray alloc] init];
@@ -30,21 +36,13 @@ NSArray *UTLtimeDelayArray;
     secsArray = [[NSMutableArray alloc] init];
     NSString *strVal = [[NSString alloc] init];
     [hoursArray addObject:@"Hours"];
-    [minsArray addObject:@"Minutes"];
-    [secsArray addObject:@"Seconds"];
+    [minsArray addObject:@"Min"];
+    [secsArray addObject:@"Sec"];
     for(int i=1; i<61; i++)
     {
         strVal = [NSString stringWithFormat:@"%d", i];
         
-        //NSLog(@"strVal: %@", strVal);
-        
-        //Create array with 0-12 hours
-        if (i < 13)
-        {
-            [hoursArray addObject:strVal];
-        }
-        
-        //create arrays with 0-60 secs/mins
+        [hoursArray addObject:strVal];
         [minsArray addObject:strVal];
         [secsArray addObject:strVal];
     }
@@ -92,8 +90,7 @@ NSArray *UTLtimeDelayArray;
 }
 - (void)pickerView:(UIPickerView *)UTLtimeDelayPicker didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-   // UTLtimeDelayArray[component] = row;
-    //[UTLtimeDelayArray setValue:<#(id)#> forKey:<#(NSString *)#>]
+    
 }
 
 - (IBAction)delaySliderChange:(id)sender {
@@ -102,5 +99,10 @@ NSArray *UTLtimeDelayArray;
 - (IBAction)UTLtimeDelaySliderChanged:(id)sender {
 }
 - (IBAction)UTLbackButton:(id)sender {
+}
+- (IBAction)UTLtoggleButtonAction:(id)sender {
+    [bluecomms write:[NSString stringWithFormat:@"2,%i,%i,%i,0!", [UTLtimeDelayPicker selectedRowInComponent:2],[UTLtimeDelayPicker selectedRowInComponent:1],[UTLtimeDelayPicker selectedRowInComponent:0]]];
+    
+    
 }
 @end

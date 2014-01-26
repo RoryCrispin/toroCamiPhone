@@ -9,21 +9,24 @@
 #import "SetupOne.h"
 #import "SerialGATT.h"
 #import "AppDelegate.h"
+
 @interface SetupOne ()
 
 @end
 
 @implementation SetupOne
 @synthesize peripheralViewControllerArray;
+@synthesize peripheralArray;
 @synthesize sensor;
 @synthesize DevicePicker;  
+
+short pickerPosition;
 AppDelegate *appDelegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -31,91 +34,64 @@ AppDelegate *appDelegate;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    pickerPosition = 0;
     sensor = [[SerialGATT alloc] init];
+    sensor.delegate = self;
     [sensor setup];
+    
+    
     appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
     peripheralViewControllerArray = [[NSMutableArray alloc] init];
+    peripheralArray = [[NSMutableArray alloc] init];
     DevicePicker.delegate = self;
     DevicePicker.dataSource = self;
-}
--(void)setConnect
-{
-    appDelegate.activPeri = sensor.activePeripheral;
-    printf("Connected");
-    NSData *data = [@"H" dataUsingEncoding:[NSString defaultCStringEncoding]];
-    if(data.length > 20)
-    {
-        int i = 0;
-        while ((i + 1) * 20 <= data.length) {
-            NSData *dataSend = [data subdataWithRange:NSMakeRange(i * 20, 20)];
-            [sensor write:sensor.activePeripheral data:dataSend];
-            i++;
-        }
-        i = data.length % 20;
-        if(i > 0)
+    
+    // I had some issues with the autoscan runnign before the bluetooth is set up so this GDC fucntion
+    // sleeps the seperate thread for 0.2s then scans for peripherals
+    dispatch_queue_t myQueue;
+    if (!myQueue)
         {
-            NSData *dataSend = [data subdataWithRange:NSMakeRange(data.length - i, i)];
-            [sensor write:sensor.activePeripheral data:dataSend];
+            myQueue = dispatch_queue_create("com.rozzles.torocam", NULL);
         }
-        
-    }else
-    {
-        //NSData *data = [MsgToArduino.text dataUsingEncoding:[NSString defaultCStringEncoding]];
-        [sensor write:sensor.activePeripheral data:data];
-    }
-
+    dispatch_async(myQueue, ^{ [NSThread sleepForTimeInterval:0.2]; [sensor findHMSoftPeripherals:5];});
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 -(void) peripheralFound:(CBPeripheral *)peripheral
 {
-    //BLEDeviceViewController *controller = [[BLEDeviceViewController alloc] init];
-    //controller.peripheral = peripheral;
-    //controller.sensor = sensor;
+    [_SetupOneScanConnectButton setTitle:@"Connect" forState:UIControlStateNormal];
     [peripheralViewControllerArray addObject:[peripheral name]];
+    [peripheralArray addObject:peripheral];
     [DevicePicker reloadAllComponents];
-    [sensor connect:peripheral];
 }
 
 - (IBAction)actionSetupOneScan:(id)sender {
-   /*
-    if ([sensor activePeripheral]) {
-        if (sensor.activePeripheral.state == CBPeripheralStateConnected) {
-            [sensor.manager cancelPeripheralConnection:sensor.activePeripheral];
-            sensor.activePeripheral = nil;
-        }
-    }
-    
-    if ([sensor peripherals]) {
-        sensor.peripherals = nil;
-        [peripheralViewControllerArray removeAllObjects];
-    }
-    */
-    
-    sensor.delegate = self;
-    
+    if( [peripheralArray count]==0)
+    {
     printf("now we are searching device...\n");
-    //[Scan setTitle:@"Scaning" forState:UIControlStateNormal];
-    //[NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(scanTimer:) userInfo:nil repeats:NO];
     
     [sensor findHMSoftPeripherals:5];
+    } else {
+        appDelegate.activePeripheral = [peripheralArray objectAtIndex:pickerPosition];
+        [sensor connect:appDelegate.activePeripheral];
+    }
 }
-
-- (void)dgStart {
-    sensor.delegate = self;
-    printf("now we are searching device...\n");
-    [sensor findHMSoftPeripherals:5];
+-(void) setConnect
+{
+   UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"FlatHome"];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 -(void) scanTimer:(NSTimer *)timer
 {
-    //[Scan setTitle:@"Scan"];
-    printf("finished scan");
+
+    printf("Scan timeout");
 }
 
 
@@ -127,7 +103,8 @@ AppDelegate *appDelegate;
 
 - (void)pickerView:(UIPickerView *)DevicePicker didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    
+    pickerPosition = row;
+    NSLog(@" Row: %i %@", row, [[peripheralArray objectAtIndex:row] name]);
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)DevicePicker
@@ -138,37 +115,6 @@ AppDelegate *appDelegate;
 - (NSInteger)pickerView:(UIPickerView *)DevicePicker numberOfRowsInComponent:(NSInteger)component
 {
     return [peripheralViewControllerArray count];
-}
-//TODO Delete this
--(void)sendD:(NSString *)dat
-{
-    sensor = [[SerialGATT alloc] init];
-    [sensor setup];
-    
-    printf("Connected");
-    NSData *data = [dat dataUsingEncoding:[NSString defaultCStringEncoding]];
-    if(data.length > 20)
-    {
-        int i = 0;
-        while ((i + 1) * 20 <= data.length) {
-            NSData *dataSend = [data subdataWithRange:NSMakeRange(i * 20, 20)];
-            [sensor write:sensor.activePeripheral data:dataSend];
-            i++;
-        }
-        i = data.length % 20;
-        if(i > 0)
-        {
-            NSData *dataSend = [data subdataWithRange:NSMakeRange(data.length - i, i)];
-            [sensor write:sensor.activePeripheral data:dataSend];
-        }
-        
-    }else
-    {
-        //NSData *data = [MsgToArduino.text dataUsingEncoding:[NSString defaultCStringEncoding]];
-        [sensor write:sensor.activePeripheral data:data];
-    }
-
-
 }
 
 

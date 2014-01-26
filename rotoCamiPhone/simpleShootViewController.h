@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #define TIMEARRAY 0
-#import "SerialGATT.h"
 
 float bulbModeSliderValue;
 BOOL bulbModeBool;
@@ -20,7 +19,7 @@ BOOL bulbModeBool;
     __weak IBOutlet UIPickerView *BulbModePickerSet;
     NSMutableArray *timeArray;
 }
-@property (strong, nonatomic) SerialGATT *sensor;
+
 @property (weak, nonatomic) IBOutlet UIPickerView *BulbModePickerObj;
 @property (weak, nonatomic) IBOutlet UISlider *TimeDelaySlider;
 @property (weak, nonatomic) IBOutlet UILabel *TimeDelayValue;
