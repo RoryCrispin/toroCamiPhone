@@ -93,15 +93,15 @@ BlueComms *bluecomms;
                 //TODO This is VERY inaccurate because I'm multiplying by the floats before rounding them
                 //Floats are prety unpredictable. 
             case 0: {
-                return [NSString stringWithFormat:@"%.0f",_BulbModeSlider.value];
+                return [NSString stringWithFormat:@"%.0f",_BulbModeSlider.value*1000];
                 break;
             }
             case 1:{
-                return [NSString stringWithFormat:@"%.0f",_BulbModeSlider.value*60];
+                return [NSString stringWithFormat:@"%.0f",_BulbModeSlider.value*60000];
                 break;
             }
             case 2:{
-                return [NSString stringWithFormat:@"%.0f",_BulbModeSlider.value*3600];
+                return [NSString stringWithFormat:@"%.0f",_BulbModeSlider.value*3600000];
                 break;
             }
             default:{
@@ -115,6 +115,6 @@ BlueComms *bluecomms;
 }
 
 - (IBAction)captureButtonAction:(id)sender {
-    [bluecomms write:[NSString stringWithFormat:@"1,%.0f,%@!", _TimeDelaySlider.value, [self bulbModeDelayParse]]];
+    [bluecomms write:[NSString stringWithFormat:@"1,%.0f,%@,%@!", _TimeDelaySlider.value, [self bulbModeDelayParse],[self bulbModeDelayParse]]];
 }
 @end
